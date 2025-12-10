@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+		<!-- include ar.js for a-frame -->
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body>
+		<a-scene embedded arjs>
+			<a-marker type="pattern" url="https://raw.githubusercontent.com/29ulmeja/ar/refs/heads/main/pattern-first.patt?scrlybrkr=dc6df90f">
+				
+			<!-- create your AR content here -->
+		<a-sky color="red"></a-sky>
+ <a-entity text="value: Welcome to the Expo;" color="white" position="0 1 -1" ></a-entity>
+     
+            
+
+                                            <a-box position="8 3 -10" color="black"
+                    height="3" width="3" depth="1"
+                    animation="
+                    property: position;
+                    from: 8 13 -10;
+                    to: -8 1 -10;
+                    loop: true;
+                    dur: 2000;
+                       dir: alternate;
+                    "
+                    
+                       animation__2="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "></a-box>
+
+
+
+                                        <a-box position="-15 1.5 0" color="blue"
+                    height="3" width="3" depth="1"
+                    animation="
+                    property: position;
+                    from: 8 8 -10;
+                    to: -8 5.5 -10;
+                    loop: true;
+                    dur: 2000;
+                       dir: alternate;
+                    "   animation__2="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "></a-box>
+            <a-sphere position="0 1 -5" radius="1" src="https://codehs.com/uploads/22b8066c8c3ef2cb6f69e297e5273720"
+animation="property:position;from: 15 1 -100;  to: 15 1 100;
+        loop: true; dur: 1000;   dir: alternate;"
+           animation="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "></a-sphere>
+           
+            
+               
+                
+                
+                        <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+                        <a-plane
+                width="20"
+                height="10"
+                color="teal"
+                rotation="-90 0 0"
+            ></a-plane>
+                        
+<a-box position="0 1 -5" depth="1" height="1" width="1" color="indigo"
+ animation="property: rotation;
+                from: 10 5 0;
+                to: 10 5 -100;
+                dur: 2000;
+                loop: true;
+                dir: alternate
+                "animation__2="property: position;
+                from: 0 1 -5;
+                to: -10 25 -90;
+                dur: 3000;
+                loop: true;
+                dir: alternate;
+                easein:cubic;"
+                   animation__3="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "
+                ></a-box>
+          <a-box position="0 1 -5" depth="2" height="4" width="0.5" color="tomato"
+          animation="property: rotation;
+                 animation="property: rotation;
+                from: 10 5 0;
+                to: 10 5 -100;
+                dur: 2000;
+                loop: true;
+                dir: alternate
+                "
+                
+                animation__2="property: position;
+                from: 0 5 10;
+                to: -10 25 -90;
+                dur: 3000;
+                loop: true;
+                dir: alternate;
+                easein:cubic;"
+                   animation__3="property: scale;
+                from: 1;
+                to: 0;
+                dur: 2000;
+                startEvents:click;
+               
+                "
+                ></a-box>
+	</a-marker>
+			<!-- define a camera which will move according to the marker position -->
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
